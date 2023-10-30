@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "createairfabric",
+  "version": "${version}",
+  "name": "Create Air Fabric",
+  "description": "Addon for compatibility Create and Thin Air",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/createairfabric/icon.png",
+  "environment": "*",
+  "entrypoints": {},
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
