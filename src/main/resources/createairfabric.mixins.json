@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.bitheaven.createairfabric.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DivingHelmetItemMixin"
+  ],
+  "client": [
+    "MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

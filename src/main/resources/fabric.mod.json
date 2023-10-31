@@ -4,15 +4,28 @@
   "version": "${version}",
   "name": "Create Air Fabric",
   "description": "Addon for compatibility Create and Thin Air",
-  "authors": [],
-  "contact": {},
+  "authors": [
+    "BitHeaven"
+  ],
+  "contact": {
+    "website": "https://bitheaven.ru",
+    "repo": "https://git.bitheaven.ru/bitheaven/create-air-fabric"
+  },
   "license": "GPL-3.0",
   "icon": "assets/createairfabric/icon.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "ru.bitheaven.createairfabric.CreateAirFabric"
+    ]
+  },
+  "mixins": [
+    "createairfabric.mixins.json"
+  ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=${fabric_loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "create": "${create_version}"
   }
 }
