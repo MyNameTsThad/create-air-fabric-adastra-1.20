@@ -25,7 +25,7 @@ public class CreateAirFabric implements ModInitializer {
     }
 
     public static boolean airQualityActivatesHelmet(LivingEntity entity) {
-        final var air = AirHelper.getO2LevelFromLocation(entity.getEyePosition(), entity.level()).getFirst();
+        final AirQualityLevel air = AirHelper.getO2LevelFromLocation(entity.getEyePosition(), entity.level()).getFirst();
         return air == AirQualityLevel.RED || air == AirQualityLevel.YELLOW;
     }
 

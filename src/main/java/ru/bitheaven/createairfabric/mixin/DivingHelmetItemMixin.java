@@ -1,17 +1,13 @@
 package ru.bitheaven.createairfabric.mixin;
 
-import fuzs.thinair.helper.AirHelper;
-import fuzs.thinair.helper.AirQualityLevel;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.material.Fluid;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
 import ru.bitheaven.createairfabric.CreateAirFabric;
 import com.simibubi.create.content.equipment.armor.DivingHelmetItem;
-
-import net.minecraft.world.entity.LivingEntity;
 
 @Mixin(DivingHelmetItem.class)
 public abstract class DivingHelmetItemMixin {

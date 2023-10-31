@@ -10,8 +10,7 @@ targetCompatibility = JavaVersion.VERSION_17
 archivesBaseName = project.archives_base_name
 group = project.maven_group
 
-//String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
-String buildNumber = 4
+String buildNumber = System.getenv("GITEA_RUN_NUMBER")
 version = "${mod_version}+${minecraft_version}" + (buildNumber != null ? "-${buildNumber}" : "")
 
 repositories {
