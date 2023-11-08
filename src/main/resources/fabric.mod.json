@@ -26,6 +26,7 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "create": "${create_version}"
+    "create": "${create_version}",
+    "thinair": "*"
   }
 }
