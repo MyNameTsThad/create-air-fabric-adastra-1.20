@@ -31,10 +31,15 @@ repositories {
     maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
     maven { url = "https://maven.tterrag.com/" } // Flywheel
 
-    maven {
-        url 'https://www.cursemaven.com'
-        content {
-            includeGroup "curse.maven"
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
         }
     }
 }
@@ -56,7 +61,7 @@ dependencies {
     modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 
     // Thin Air
-    modImplementation("curse.maven:new-thin-air-878379:4848006")
+    modImplementation("maven.modrinth:thin-air:v8.1.3-1.20.1-Fabric")
 
     // Development QOL
     modLocalRuntime("maven.modrinth:lazydfu:${lazydfu_version}")
