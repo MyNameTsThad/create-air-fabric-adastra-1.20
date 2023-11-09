@@ -56,7 +56,7 @@ dependencies {
     modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 
     // Thin Air
-    modImplementation("curse.maven:new-thin-air-878379:4611944")
+    modImplementation("curse.maven:new-thin-air-878379:4848006")
 
     // Development QOL
     modLocalRuntime("maven.modrinth:lazydfu:${lazydfu_version}")
