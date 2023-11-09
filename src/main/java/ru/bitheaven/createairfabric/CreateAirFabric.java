@@ -1,8 +1,7 @@
 package ru.bitheaven.createairfabric;
 
 import com.simibubi.create.Create;
-import fuzs.thinair.helper.AirHelper;
-import fuzs.thinair.helper.AirQualityLevel;
+import fuzs.thinair.helper.AirQualityHelperImpl;
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -25,8 +24,8 @@ public class CreateAirFabric implements ModInitializer {
     }
 
     public static boolean airQualityActivatesHelmet(LivingEntity entity) {
-        final AirQualityLevel air = AirHelper.getO2LevelFromLocation(entity.getEyePosition(), entity.level()).getFirst();
-        return air == AirQualityLevel.RED || air == AirQualityLevel.YELLOW;
+        AirQualityHelperImpl air = new AirQualityHelperImpl();
+        return !air.getAirQualityAtLocation(entity.level(), entity.getEyePosition()).canBreathe;
     }
 
     public static ResourceLocation id(String path) {
