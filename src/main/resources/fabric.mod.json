@@ -3,7 +3,7 @@
   "id": "createairfabric",
   "version": "${version}",
   "name": "Create Air Fabric",
-  "description": "Addon for compatibility Create and Thin Air",
+  "description": "Addon for Create that add compatibility with Thin Air, Ad Astra",
   "authors": [
     "BitHeaven"
   ],
@@ -26,7 +26,6 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "create": "${create_version}",
-    "thinair": "*"
+    "create": "${create_version}"
   }
 }
