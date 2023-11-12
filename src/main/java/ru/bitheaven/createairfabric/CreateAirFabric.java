@@ -1,11 +1,12 @@
 package ru.bitheaven.createairfabric;
 
 import com.simibubi.create.Create;
+import earth.terrarium.ad_astra.common.util.OxygenUtils;
 import fuzs.thinair.helper.AirQualityHelperImpl;
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.LivingEntity;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.world.entity.Entity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,12 +24,15 @@ public class CreateAirFabric implements ModInitializer {
         ), NAME);
     }
 
-    public static boolean airQualityActivatesHelmet(LivingEntity entity) {
-        AirQualityHelperImpl air = new AirQualityHelperImpl();
-        return !air.getAirQualityAtLocation(entity.level(), entity.getEyePosition()).canBreathe;
-    }
-
-    public static ResourceLocation id(String path) {
-        return new ResourceLocation(ID, path);
+    public static boolean isOxygen(Entity entity) {
+        boolean oxygen = true;
+        if (FabricLoader.getInstance().isModLoaded("thinair")) {
+            oxygen &= new AirQualityHelperImpl()
+                    .getAirQualityAtLocation(entity.level(), entity.getEyePosition()).canBreathe;
+        }
+        if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
+            oxygen &= OxygenUtils.levelHasOxygen(entity.level());
+        }
+        return oxygen;
     }
 }
