@@ -1,7 +1,7 @@
 package ru.bitheaven.createairfabric;
 
 import com.simibubi.create.Create;
-import earth.terrarium.ad_astra.common.util.OxygenUtils;
+import earth.terrarium.adastra.api.systems.OxygenApi;
 import fuzs.thinair.helper.AirQualityHelperImpl;
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
@@ -31,7 +31,7 @@ public class CreateAirFabric implements ModInitializer {
                     .getAirQualityAtLocation(entity.level(), entity.getEyePosition()).canBreathe;
         }
         if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
-            oxygen &= OxygenUtils.levelHasOxygen(entity.level());
+            oxygen &= OxygenApi.API.hasOxygen(entity.level());
         }
         return oxygen;
     }

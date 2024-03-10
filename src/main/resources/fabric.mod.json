@@ -5,11 +5,12 @@
   "name": "Create Air Fabric",
   "description": "Addon for Create that add compatibility with Thin Air, Ad Astra",
   "authors": [
-    "BitHeaven"
+    "BitHeaven",
+    "IWant2TryHard / MyNameTsThad"
   ],
   "contact": {
-    "website": "https://bitheaven.ru",
-    "repo": "https://git.bitheaven.ru/bitheaven/create-air-fabric"
+    "website": "https://git.bitheaven.ru/bitheaven/create-air-fabric",
+    "repo": "https://github.com/MyNameTsThad/create-air-fabric-adastra-1.20"
   },
   "license": "GPL-3.0",
   "icon": "assets/createairfabric/icon.png",
